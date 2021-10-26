@@ -1,0 +1,12 @@
+<ul>
+    {% for container in container_list %}
+    <li> <a href="{% url 'attas:customer' container.slug %}">{{ container }}</a> </li>
+
+
+{% empty %}
+<p> no one here</p>
+
+</ul>
+{% endfor %}
+
+<p><a href="{% url 'attas:add_container' %}"> Add new container name</a> </p>

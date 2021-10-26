@@ -1,0 +1,9 @@
+<ul>
+    {% for customer in customers %}
+    <li> {{customer.name }} | {{customer.purchase }} |   {{customer.paid }} | {{customer.type }} |
+        {{customer.done }} |</li>
+
+    {% empty %}
+    <p> No one here</p>
+    {% endfor %}
+</ul>

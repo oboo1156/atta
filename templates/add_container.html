@@ -1,0 +1,7 @@
+<p>Fill to add a new container name</p>
+
+<form action="{% url 'attas:add_container' %}" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button name="submit">Add</button>
+</form>
