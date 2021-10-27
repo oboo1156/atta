@@ -1,0 +1,7 @@
+<p>Make changes</p>
+
+<form action="{% url 'attas:edit_customer' customer.name customer.id %}" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button name="submit">Add</button>
+</form>

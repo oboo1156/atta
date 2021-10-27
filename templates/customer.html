@@ -1,9 +1,14 @@
+
+
 <ul>
     {% for customer in customers %}
-    <li> {{customer.name }} | {{customer.purchase }} |   {{customer.paid }} | {{customer.type }} |
-        {{customer.done }} |</li>
+    <li> <a href="{% url 'attas:edit_customer' customer.name customer.id%}">{{customer.name }} | {{customer.purchase }}
+        |   {{customer.paid }} | {{customer.type }} |
+        {{customer.done }} |</a></li>
 
     {% empty %}
     <p> No one here</p>
     {% endfor %}
 </ul>
+<a href="{% url 'attas:add_customer' container.slug %}">add customers</a>
+

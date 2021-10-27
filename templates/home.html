@@ -1,6 +1,8 @@
 <ul>
     {% for container in container_list %}
-    <li> <a href="{% url 'attas:customer' container.slug %}">{{ container }}</a> </li>
+    <li> <a href="{% url 'attas:customer' container.slug %}">{{ container }}</a> |
+        <a href="{% url 'attas:edit_container' container.slug%}">Edit</a> |
+    <a href="{% url 'attas:delete_container' container.slug %}">Delete</a></li>
 
 
 {% empty %}

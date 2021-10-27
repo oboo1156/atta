@@ -1,0 +1,7 @@
+<form action="{% url 'attas:delete_container' container.slug %}" method="post">
+    {% csrf_token %}
+    <p>Are you sure you want to delete</p>
+    <button name="submit"> Yes </button>
+    <a href="#"> Cancel</a>
+
+</form>

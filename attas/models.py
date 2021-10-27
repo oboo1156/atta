@@ -6,8 +6,8 @@ from django.contrib.auth.models import User
 class Container(models.Model):
     name = models.CharField(max_length=200)
     date = models.DateField(default=timezone.now)
-    owner = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
-    slug = models.SlugField(max_length=200, unique_for_date='date', null=True)
+    owner = models.ForeignKey(User, on_delete=models.CASCADE, null=True)#change to  non-nullable later
+    slug = models.SlugField(max_length=200, unique_for_date='date', null=True) #change to  non-nullable later
 
     class Meta:
         ordering = ('-date',)
@@ -36,7 +36,7 @@ class Customer(models.Model):
     purchase = models.IntegerField(default=0)
     paid = models.IntegerField(default=0)
     type = models.CharField(choices=TYPE, max_length=30)
-    done = models.BooleanField(default=False)
+    done = models.BooleanField(default=False) #make it choice to save time
 
     class Meta:
         ordering = ('name',)

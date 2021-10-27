@@ -1,11 +1,19 @@
 from django import forms
-from .models import Container
+from .models import Container, Customer
 
 
 class ContainerForm(forms.ModelForm):
     class Meta:
         model = Container
-        fields = ['name'] #name and date is not defined in current file so it must be in string
+        fields = ['name']
+
+
+class CustomerForm(forms.ModelForm):
+    class Meta:
+        model = Customer
+        fields = ['name', 'purchase', 'paid', 'type', 'done']
+
+
 
 
 

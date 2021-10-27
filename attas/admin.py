@@ -15,7 +15,7 @@ class ContainerAdmin(admin.ModelAdmin):
 
 @admin.register(Customer)
 class CustomerAdmin(admin.ModelAdmin):
-    list_display = ('name', 'purchase', 'paid', 'type', 'done')
+    list_display = ('id','name', 'purchase', 'paid', 'type', 'done')
     list_filter = ('container', 'type', 'done')
     search_fields = ('name', )
     ordering = ('name', 'done')
