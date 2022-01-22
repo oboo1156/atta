@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<html>
+<body>
+
+<!-- Hero Start -->
+        <div class="hero">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <div class="hero-text">
+                            <h1>Welcome to Sarp-A Enterprise</h1>
+                            <p>
+                                We deal in foreign shoes.Mostly imported from China
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 d-none d-md-block">
+                      <div class="hero-image">
+                            <img src="{% static 'img/shoe1.jpg' %}" alt="Hero Image">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- About Start -->
+        <div class="about">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-5 col-md-6">
+                        <div class="about-img">
+                            <img src="{% static 'img/atta1.jpeg' %}" alt="Image">
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-6">
+                        <div class="section-header text-left">
+                            <p>CEO OF SARP-A Enterprise</p>
+                            <h2>ATTA SARPONG</h2>
+                        </div>
+                        <div class="about-text">
+                            <p>
+                                Atta Sarpong has been in the shoe business since the year, 2000. Has been able to recruit other people into the business.
+                                He says, ''Life has not been easy, but by the Grace of God I have made a lot out of this business".
+                            </p>
+                            <p>
+                                He always advice his workers to put their trust in God and all things will work good on their side.
+                            </p>
+                            <a class="btn" href="#">👞👠👟</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+        <!-- Team/Shoe Start -->
+        <div class="team">
+            <div class="container">
+                <div class="section-header text-center">
+                    <p>We Deal In All Kinds of Shoes</p>
+                    <h2>Anything about Shoe?? We got you covered</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-item">
+                            <div class="team-img">
+                                 <img src="{% static 'img/menshoe.jpg' %}" alt="Image">
+                            </div>
+                            <div class="team-text">
+                                <h2>Men</h2>
+                                <p>All Kinds</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-item">
+                            <div class="team-img">
+                               <img src="{% static 'img/ladiesShoe.jpg' %}" alt="Image">
+                            </div>
+                            <div class="team-text">
+                                <h2>Ladies</h2>
+                                <p>All Kinds</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-item">
+                            <div class="team-img">
+                                <img src="{% static 'img/children.jpg' %}" alt="Image">
+                            </div>
+                            <div class="team-text">
+                                <h2>Children</h2>
+                                <p>All Kinds</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-item">
+                            <div class="team-img">
+                                <img src="{% static 'img/wasawa.jpeg' %}" alt="Image">
+                            </div>
+                            <div class="team-text">
+                                <h2>Wasawa</h2>
+                                <p>All Kinds</p>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</body>
+</html>
+
+{% endblock content %}

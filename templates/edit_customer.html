@@ -1,3 +1,7 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
 <p>Make changes</p>
 
 <form action="{% url 'attas:edit_customer' customer.name customer.id %}" method="post">
@@ -5,3 +9,5 @@
     {{form.as_p}}
     <button name="submit">Add</button>
 </form>
+
+{% endblock content %}

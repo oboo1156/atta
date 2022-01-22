@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Container</th>
+      <th scope="col">Date</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+   {% for container in container_list %}
+    <tr>
+      <th scope="row"><a href="{% url 'attas:customer' container.slug %}">{{ container.name }}</a></th>
+      <td>{{ container.date |date:'d M' }}</td>
+      <td><a href="{% url 'attas:edit_container' container.slug%}">Edit</a></td>
+      <td><a href="{% url 'attas:delete_container' container.slug %}">Delete</a> </td>
+    </tr>
+
+    {% empty %}
+    <p> No container here yet  </p>
+    {% endfor %}
+  </tbody>
+</table>
+
+
+
+<p class="button"><a href="{% url 'attas:add_container' %}"> ➕Container <span></span></a> </p>
+
+{% endblock content %}
+

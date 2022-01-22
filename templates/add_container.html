@@ -1,7 +1,11 @@
-<p>Fill to add a new container name</p>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
 
 <form action="{% url 'attas:add_container' %}" method="post">
     {% csrf_token %}
     {{form.as_p}}
     <button name="submit">Add</button>
 </form>
+
+{% endblock content %}

@@ -1,5 +1,11 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
 <form action="{% url 'attas:add_customer' container.slug %}" method="post">
     {% csrf_token %}
     {{form.as_p }}
     <button name="submit"> Save </button>
 </form>
+
+{% endblock content %}

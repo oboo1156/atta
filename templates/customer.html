@@ -1,14 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
 
+<h1>Customers of Container {{container.name}}</h1>
 
-<ul>
-    {% for customer in customers %}
-    <li> <a href="{% url 'attas:edit_customer' customer.name customer.id%}">{{customer.name }} | {{customer.purchase }}
-        |   {{customer.paid }} | {{customer.type }} |
-        {{customer.done }} |</a></li>
+<table class="table table-dark table-striped">
+    <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Purchase</th>
+      <th scope="col">Paid</th>
+      <th scope="col">Type</th>
+      <th scope="col">Done</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for customer in customers %}
+    <tr>
+      <th scope="row">{{customer.name }}</th>
+      <td>{{customer.purchase }}</td>
+      <td>{{customer.paid }}</td>
+      <td>{{customer.type }}</td>
+      <td>{{customer.done }}</td>
+      <td><a href="{% url 'attas:edit_customer' customer.name customer.id%}">Edit</a></td>
+      <td><a href="{% url 'attas:delete_customer' customer.name customer.id%}">Delete</a></td>
+    </tr>
 
     {% empty %}
-    <p> No one here</p>
+    <p> No customer here yet  </p>
     {% endfor %}
-</ul>
-<a href="{% url 'attas:add_customer' container.slug %}">add customers</a>
+  </tbody>
+</table>
 
+
+<p class="button"><a href="{% url 'attas:add_customer' container.slug %}"> ➕customer <span></span></a> </p>
+{% endblock content %}
